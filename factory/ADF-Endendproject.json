@@ -1,0 +1,9 @@
+{
+	"name": "ADF-Endendproject",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fe4c0f2f-ad2a-47d3-9362-a7c00f71048e",
+		"tenantId": "5cb846f7-4bea-4a6c-87ed-68965d16dd95"
+	}
+}
