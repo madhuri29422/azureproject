@@ -9,6 +9,11 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.loop_input",
+						"type": "Expression"
+					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "AzureSQL to Lake",
@@ -118,7 +123,7 @@
 									"parameters": {
 										"container": "bronze",
 										"folder": {
-											"value": "@{item().table}.cdc",
+											"value": "@{item().table}_cdc",
 											"type": "Expression"
 										},
 										"file": "cdc.json"
@@ -258,7 +263,7 @@
 												"parameters": {
 													"container": "bronze",
 													"folder": {
-														"value": "@{item().table}.cdc",
+														"value": "@{item().table}_cdc",
 														"type": "Expression"
 													},
 													"file": "empty.json"
@@ -272,7 +277,7 @@
 												"parameters": {
 													"container": "bronze",
 													"folder": {
-														"value": "@{item().table}.cdc",
+														"value": "@{item().table}_cdc",
 														"type": "Expression"
 													},
 													"file": "cdc.json"
